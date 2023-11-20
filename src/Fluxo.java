@@ -5,7 +5,15 @@ public class Fluxo {
 
 		System.out.println("Início de main");
 
-		metodo1();
+		try {
+			metodo1();
+		} 
+		catch (ArithmeticException | NullPointerException ex) {
+			System.out.println("Exceção - " + 
+					ex.getClass().getSimpleName() + ": " + 
+					ex.getMessage());
+			ex.printStackTrace();
+		}
 
 		System.out.println("Fim de main");
 
@@ -15,12 +23,7 @@ public class Fluxo {
 
 		System.out.println("Início de metodo1");
 
-		try {
-			metodo2();
-		} 
-		catch (ArithmeticException ex) {
-			System.out.println("Exceção - ArithmeticException: " + ex);
-		}
+		metodo2();
 
 		System.out.println("Fim de metodo1");
 
@@ -32,7 +35,9 @@ public class Fluxo {
 
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
-			int a = i / 0; // ArithmeticException: / by zero
+			// int a = i / 0; // ArithmeticException: / by zero
+			Conta conta = null;
+			conta.deposita(); // NullPointerException: Cannot invoke "Conta.deposita()" because "conta" is null
 		}
 
 		System.out.println("Fim de metodo2");
