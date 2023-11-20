@@ -15,7 +15,12 @@ public class Fluxo {
 
 		System.out.println("Início de metodo1");
 
-		metodo2();
+		try {
+			metodo2();
+		} 
+		catch (ArithmeticException ex) {
+			System.out.println("Exceção - ArithmeticException: " + ex);
+		}
 
 		System.out.println("Fim de metodo1");
 
