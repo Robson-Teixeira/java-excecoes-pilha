@@ -25,8 +25,10 @@ public class Fluxo {
 
 		System.out.println("Início de metodo2");
 
-		for (int i = 1; i <= 5; i++)
+		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
+			int a = i / 0; // ArithmeticException: / by zero
+		}
 
 		System.out.println("Fim de metodo2");
 	}
