@@ -33,14 +33,9 @@ public class Fluxo {
 
 		System.out.println("Início de metodo2");
 
-		for (int i = 1; i <= 5; i++) {
-			System.out.println(i);
-			// int a = i / 0; // ArithmeticException: / by zero
-			Conta conta = null;
-			conta.deposita(); // NullPointerException: Cannot invoke "Conta.deposita()" because "conta" is null
-		}
+		throw new ArithmeticException("ArithmeticException");
 
-		System.out.println("Fim de metodo2");
+		// System.out.println("Fim de metodo2");
 	}
 
 }
