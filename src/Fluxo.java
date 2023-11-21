@@ -8,7 +8,7 @@ public class Fluxo {
 		try {
 			metodo1();
 		} 
-		catch (ArithmeticException | NullPointerException ex) {
+		catch (ArithmeticException | NullPointerException | MyException ex) {
 			System.out.println("Exceção - " + 
 					ex.getClass().getSimpleName() + ": " + 
 					ex.getMessage());
@@ -33,7 +33,7 @@ public class Fluxo {
 
 		System.out.println("Início de metodo2");
 
-		throw new ArithmeticException("ArithmeticException");
+		throw new MyException("MyException");
 
 		// System.out.println("Fim de metodo2");
 	}
