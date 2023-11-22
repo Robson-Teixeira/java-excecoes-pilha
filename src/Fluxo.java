@@ -19,7 +19,7 @@ public class Fluxo {
 
 	}
 
-	private static void metodo1() {
+	private static void metodo1() throws MyException {
 
 		System.out.println("Início de metodo1");
 
@@ -29,7 +29,7 @@ public class Fluxo {
 
 	}
 
-	private static void metodo2() {
+	private static void metodo2() throws MyException {
 
 		System.out.println("Início de metodo2");
 
