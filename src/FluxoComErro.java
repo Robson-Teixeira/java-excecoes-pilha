@@ -8,7 +8,7 @@ public class FluxoComErro {
 		try {
 			metodo1();
 		} 
-		catch (ArithmeticException | NullPointerException | MyException ex) {
+		catch (ArithmeticException | NullPointerException ex) {
 			System.out.println("Exceção - " + 
 					ex.getClass().getSimpleName() + ": " + 
 					ex.getMessage());
